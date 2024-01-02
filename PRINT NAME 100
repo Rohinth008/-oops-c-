@@ -1,0 +1,17 @@
+#include<iostream>
+
+class NamePrinter {
+public:
+    void printNameMultipleTimes(const std::string& name, int times) {
+        for (int i = 0; i < times; ++i) {
+            std::cout << name << std::endl;
+        }
+    }
+};
+
+int main() {
+    NamePrinter namePrinter;
+    namePrinter.printNameMultipleTimes("ROHINTH", 100);
+
+    return 0;
+}
