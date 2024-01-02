@@ -3,7 +3,7 @@
 class NamePrinter {
 public:
     void printName() {
-        std::cout << "My name is: ChatGPT" << std::endl;
+        std::cout << "My name is: ROHINTH" << std::endl;
     }
 };
 
