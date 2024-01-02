@@ -1,0 +1,15 @@
+#include<iostream>
+
+class NamePrinter {
+public:
+    void printName() {
+        std::cout << "My name is: ChatGPT" << std::endl;
+    }
+};
+
+int main() {
+    NamePrinter namePrinter;
+    namePrinter.printName();
+
+    return 0;
+}
