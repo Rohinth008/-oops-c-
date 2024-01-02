@@ -1,0 +1,20 @@
+#include<iostream>
+
+class NumberPrinter {
+public:
+    void printEnteredNumber() {
+        int number;
+
+        std::cout << "Enter a number: ";
+        std::cin >> number;
+
+        std::cout << "You entered: " << number << std::endl;
+    }
+};
+
+int main() {
+    NumberPrinter numberPrinter;
+    numberPrinter.printEnteredNumber();
+
+    return 0;
+}
