@@ -1,0 +1,35 @@
+#include <bits/stdc++.h>
+using namespace std;
+class Solution {
+   public:
+   string shortestPalindrome(string s) {
+      int n = s.size();
+      string s1 = s;
+      string s2 = s;
+      reverse(s2.begin(), s2.end());
+      s2 = s + "#" + s2;
+      vector <int> lps(s2.size());
+      int j = 0;
+      int i = 1;
+      while(i <s2.size()){
+         if(s2[i] == s2[j]){
+            lps[i] = j + 1;
+            j++;
+            i++;
+         } else {
+            if(j > 0){
+               j = lps[ j - 1];
+            } else {
+               i++;
+            }
+         }
+      }
+      string extra = s.substr(lps[lps.size() - 1], n - lps[lps.size() - 1]);
+      reverse(extra.begin(), extra.end());
+      return extra + s;
+   }
+};
+main(){
+   Solution ob;
+   cout << (ob.shortestPalindrome("abcc"));
+}
